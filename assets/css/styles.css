@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --primary-color: ;
+
+    --primary-bg-color: #411C00;
+    --secundary-bg-color: ;
+    --border-color: #7A5221;
+
+    --logo-color: #FFFFFF;
+    --title-color: ;
+    --link-color: ;
+    --icon-color: #C7C8C9;
+    --text-color: #FFFFFF;
+    --span-color: #DEAB4F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    list-style: none;
+}
+
+body {
+    background: var(--primary-bg-color);
+    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    /* RESPONSIVIDADE */
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.header__brand .brand__logo {
+    color: var(--logo-color);
+    cursor: pointer;
+    font-size: 18pt;
+    font-weight: 700;
+    letter-spacing: .175rem;
+
+    span {
+        color: var(--span-color);
+    }
+}
+
+i {
+    color: var(--icon-color);
+}
+
+#toggleTheme {
+    font-size: 2rem;
+    color: var(--icon-color);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    background: var(--primary-bg-color);
+}
+
+.menu__item{
+    width: 100%;
+}
+
+.menu--mobile {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-between;
+    border-top: 1.5px solid var(--border-color);
+}
+
+.menu--mobile .menu__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 1rem;
+    gap: .5rem;
+}
+
+.menu__icon,
+.menu__text {
+    color: var(--text-color);
+}
+
+.menu__icon {
+    font-size: 1.5rem;
+}
+
+.menu__text {
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px){
+    .menu--mobile{
+        display: none;
+    }
+}
