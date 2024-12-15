@@ -26,14 +26,9 @@
 
         <nav class="header__nav-desktop">
             <ul class="menu menu--desktop">
-                <li class="menu__item">
+                <li class="menu__item active">
                     <a class="menu__link" href="#home">
                         <span class="menu__text">Home</span>
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="#projeto">
-                        <span class="menu__text">Projetos</span>
                     </a>
                 </li>
                 <li class="menu__item">
@@ -42,7 +37,12 @@
                     </a>
                 </li>
                 <li class="menu__item">
-                    <a class="menu__link" href="#contrato">
+                    <a class="menu__link" href="#projetos">
+                        <span class="menu__text">Projetos</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#contato">
                         <span class="menu__text">Contato</span>
                     </a>
                 </li>
@@ -54,15 +54,9 @@
     <nav class="header__nav-mobile">
         <ul class="menu menu--mobile">
             <li class="menu__item">
-                <a class="menu__link" href="#home">
+                <a class="menu__link active" href="#home">
                     <i class="menu__icon bi bi-house-door-fill"></i>
                     <span class="menu__text">Home</span>
-                </a>
-            </li>
-            <li class="menu__item">
-                <a class="menu__link" href="#projeto">
-                    <i class="menu__icon bi bi-window-stack"></i>
-                    <span class="menu__text">Projetos</span>
                 </a>
             </li>
             <li class="menu__item">
@@ -72,7 +66,13 @@
                 </a>
             </li>
             <li class="menu__item">
-                <a class="menu__link" href="#contrato">
+                <a class="menu__link" href="#projetos">
+                    <i class="menu__icon bi bi-window-stack"></i>
+                    <span class="menu__text">Projetos</span>
+                </a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#contato">
                     <i class="menu__icon bi bi-envelope"></i>
                     <span class="menu__text">Contato</span>
                 </a>
@@ -82,7 +82,7 @@
 
     <main>
 
-        <div class="main__content1">
+        <section class="main__content1" id="home">
             <h1><b>Soluções Criativas &</b> Desenvolvimento Front-end</h1>
             <p>Matheus Willey, Itaituba-PA, Desenvolvedor Front-end Junior.</p>
             <ul class="menu menu--social">
@@ -103,8 +103,8 @@
                     <i class="bi bi-arrow-down-right"></i>
                 </button>
             </a>
-        </div>
-        <div class="main__content2">
+        </section>
+        <section class="main__content2" id="sobre">
             <div class="aboutMe">
                 <div class="aboutMe__title">
                     <h2>Sobre <span>Mim</span></h2>
@@ -128,10 +128,10 @@
                         evolução como desenvolvedor. Fique à vontade para explorar meu trabalho e, se quiser trocar
                         ideias ou
                         colaborar, será um prazer conversar!
+                    </p>
                 </div>
-                </p>
             </div>
-        </div>
+        </section>
 
     </main>
 
@@ -147,6 +147,71 @@
                 </div>
             </li>
         </ul>
+    </section>
+
+    <section id="projetos" class="projects">
+        <h2>Projetos</h2>
+        <div class="projects__container">
+            <div class="projects__card">
+                <div class="card__cover"></div>
+                <div class="card__content">
+                    <h3 class="card__title">Pokédex Explorer</h3>
+                    <p class="card__description">Pokédex interativa com detalhes dinâmicos</p>
+                    <ul class="card__list">
+                        <li>
+                            <p>Listagem de Pokémons;</p>
+                        </li>
+                        <li>
+                            <p>Detalhes do Pokémon;</p>
+                        </li>
+                        <li>
+                            <p>Design Responsivo.</p>
+                        </li>
+                    </ul>
+                    <div class="card__buttons">
+                        <button class="btn btn--primary">
+                            <span>Prévia</span>
+                            <i class="bi bi-arrow-down-right"></i>
+                        </button>
+                        <button class="btn">
+                            <span>Repositório</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/MatheusWilley">
+                <button class="btn btn--primary">
+                    <span>Ver Todos os Projetos</span>
+                    <i class="bi bi-arrow-up-right"></i>
+                </button>
+            </a>
+        </div>
+    </section>
+
+    <section class="contact" id="contato">
+        <h2>Contate-me</h2>
+        <p>Estou disponível para serviços e novas conexões. Contate-me via
+            e-mail e conecte-se comigo através das minhas redes sociais.
+        </p>
+        <ul class="menu menu--social">
+            <li>
+                <a class="menu__link" href="https://github.com/MatheusWilley" target="_blank">
+                    <i class="menu__icon bi bi-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </li>
+            <li>
+                <a class="menu__link" href="https://www.linkedin.com/in/matheus-willey-96b984244/" target="_blank">
+                    <i class="menu__icon bi bi-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+            </li>
+        </ul>
+        <a href="mailto:matheuswilley2757@gmail.com">
+            <button class="btn btn--primary">
+                <span class="email">matheuswilley2757@gmail.com</span>
+            </button>
+        </a>
     </section>
 
     <footer>

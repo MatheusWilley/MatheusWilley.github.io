@@ -51,6 +51,16 @@ h1 {
     font-size: 2.5rem;
 }
 
+.aboutMe h2,
+.projects h2,
+.contact h2 {
+    text-align: center;
+    filter: drop-shadow(1px 1px 2px var(--border-color));
+    letter-spacing: .2rem;
+    font-size: 1.8rem;
+    margin: 1rem 0;
+}
+
 h1,
 h2,
 h3 {
@@ -155,11 +165,15 @@ i {
     background: var(--menu-bg-color);
 }
 
+main,
+.projects {
+    padding: 2.5rem 1rem;
+}
+
 main {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 2.5rem 1rem;
 }
 
 .main__content1 {
@@ -180,13 +194,15 @@ main {
     width: 90%;
     margin: auto;
     background: transparent;
+    border: 1px solid var(--border-color);
     border-radius: 3.125rem;
     padding: 0.875rem 1.5rem;
     transition: ease-in-out .3s;
     cursor: pointer;
+    color: var(--primary-color);
 }
 
-.btn:hover{
+.btn:hover {
     transform: scale(1.05);
     transition: ease-in-out .2s;
 }
@@ -206,15 +222,14 @@ i {
     }
 }
 
-.main__content2{
+.main__content2 {
     background: var(--menu-bg-color);
-    margin-top: rem;
     border: 1px solid var(--border-color);
     border-radius: 20px;
     filter: drop-shadow(2.5px 2.5px 1px var(--border-color));
 }
 
-.aboutMe{
+.aboutMe {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -222,17 +237,14 @@ i {
     padding: 1rem 1rem;
 }
 
-.aboutMe h2{
-    text-align: center;
-    filter: drop-shadow(.5px .5px 1px var(--border-color));
-    letter-spacing: .2rem;
+.aboutMe h2 {
 
-    span{
+    span {
         font-weight: 500;
     }
 }
 
-.aboutMe p{
+.aboutMe p {
     font-size: 1rem;
 }
 
@@ -249,25 +261,25 @@ i {
     text-transform: none;
     text-align: justify;
 
-    span{
+    span {
         filter: drop-shadow(.5px .5px 1px var(--border-color));
         letter-spacing: .1rem;
         font-weight: 500;
     }
 }
 
-.skills__list{
+.skills__list {
     width: 50%;
 }
 
-.skills__list .skills__item{
+.skills__list .skills__item {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-.skills__imgs{
+.skills__imgs {
     width: 5rem;
     height: 6rem;
     /* border: 2px solid var(--menu-bg-color); */
@@ -279,10 +291,112 @@ i {
     z-index: -1;
 }
 
-.skills__img{
+.skills__img {
     width: 3rem;
     filter: drop-shadow(2.5px 2.5px 1px var(--border-color));
 }
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.projects__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.projects__container a {
+    width: 100%;
+}
+
+.projects__card {
+    display: flex;
+    flex-direction: column;
+}
+
+.projects__card .card__cover {
+    background-image: url('../images/projetos/pokedex-projeto.png');
+    width: 15rem;
+    height: 15rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 2rem;
+    align-self: center;
+    border: 1px solid var(--border-color);
+    filter: drop-shadow(4px 4px 2px var(--border-color));
+}
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.card__title {
+    font-size: 1.4rem;
+    filter: drop-shadow(.25px .25px 1px var(--border-color));
+    letter-spacing: .1rem;
+}
+
+.card__description {
+    font-size: 1.2rem;
+}
+
+.card__list {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.card__list li {
+    list-style: disc;
+    color: var(--text-color);
+
+    p {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+}
+
+.card__buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.card__buttons .btn {
+    width: 45%;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    border-top: 1px solid var(--primary-border-color);
+    border-bottom: 1px solid var(--primary-border-color);
+    padding: 1rem;
+  }
+  
+  .contact p {
+    text-align: center;
+  }
+  
+  .contact .btn {
+    width: auto;
+  }
+  
+  .contact .email {
+    text-transform: lowercase;
+  }
 
 footer {
     display: flex;
@@ -300,11 +414,11 @@ footer p {
 }
 
 @media (min-width: 320px) {
-    header{
+    header {
         padding: 1.5rem 1rem 0 1rem;
     }
 
-    .aboutMe__content{
+    .aboutMe__content {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -312,7 +426,7 @@ footer p {
         align-items: center;
     }
 
-    .aboutMe__img{
+    .aboutMe__img {
         background-image: url('./../images/foto.jpg');
         border-radius: 50%;
         width: 200px;
@@ -334,18 +448,19 @@ footer p {
     }
 
     .header__nav-mobile {
-        display: none; 
+        display: none;
     }
 
     .header__nav-desktop {
         display: flex;
     }
 
-    main{
+    main,
+    .projects {
         padding: 0;
     }
 
-    .main__content1{
+    .main__content1 {
         width: 47%;
         height: 90vh;
         display: flex;
@@ -355,17 +470,17 @@ footer p {
         padding: 0 6rem;
     }
 
-    .btn--primary{
+    .btn--primary {
         width: 100%;
     }
 
-    .main__content2{
+    .main__content2 {
         margin: 0 2rem;
         padding: 1rem 6rem;
-        margin-top: -5.5rem;
+        margin-top: -7rem;
     }
 
-    .aboutMe__content{
+    .aboutMe__content {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -373,7 +488,7 @@ footer p {
         gap: 10rem;
     }
 
-    .aboutMe__img{
+    .aboutMe__img {
         background-image: url('./../images/foto.jpg');
         border-radius: 50%;
         width: 250px;
@@ -385,34 +500,76 @@ footer p {
         filter: drop-shadow(5px 3px .5px var(--border-color));
     }
 
-    .main__content2 p{
+    .main__content2 p {
         width: 50%;
     }
 
-    .skills h2{
+    .skills h2 {
         font-size: 1.75rem;
     }
 
-    .skills__list .skills__item{
+    .skills__list .skills__item {
         justify-content: center;
         gap: 3rem;
     }
 
-    footer{
+    .projects {
+        padding: 4rem 6rem;
+    }
+
+    .projects__card {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10rem;
+    }
+
+    .projects__card .card__cover {
+        background-image: url('../images/projetos/pokedex-projeto.png');
+        width: 18rem;
+        height: 18rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 2rem;
+        align-self: center;
+        border: 1px solid var(--border-color);
+        filter: drop-shadow(4px 4px 2px var(--border-color));
+    }
+
+    .card__content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .projects__container a {
+        align-self: center;
+        width: 40%;
+    }
+
+    .contact {
+        padding: 6rem;
+      }
+      .contact p {
+        width: 80%;
+      }
+
+    footer {
         margin: 0;
     }
 }
 
 @media (min-width: 1200px) {
-    main{
+    main {
         padding: 0 6rem 2rem;
     }
 
-    .main__content1 .btn{
+    .main__content1 .btn {
         width: auto;
     }
 
-    .skills{
+    .skills {
         flex-direction: row;
         justify-content: space-between;
         padding: 2rem 9rem;
@@ -420,11 +577,11 @@ footer p {
 }
 
 @media (min-width: 1400px) {
-    h1{
+    h1 {
         font-size: 4.25rem;
     }
 
-    p{
+    p {
         font-size: 1.5rem;
     }
 
@@ -432,24 +589,24 @@ footer p {
         padding: 1.5rem 15rem;
     }
 
-    .main__content1{
+    .main__content1 {
         padding: 0 3rem;
 
-        p{
+        p {
             font-size: 1.5rem;
         }
     }
 
-    .skills h2{
+    .skills h2 {
         font-size: 2.5rem;
     }
 
-    .skills__imgs{
+    .skills__imgs {
         width: 6rem;
         height: 7rem;
     }
 
-    .skills__img{
+    .skills__img {
         width: 4rem;
     }
 
