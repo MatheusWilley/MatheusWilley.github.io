@@ -369,10 +369,8 @@ i {
 .card__buttons {
     display: flex;
     flex-direction: row;
-}
-
-.card__buttons .btn {
-    width: 45%;
+    justify-content: space-between;
+    align-items: start;
 }
 
 .contact {
@@ -546,6 +544,10 @@ footer p {
     .projects__container a {
         align-self: center;
         width: 40%;
+    }
+
+    .card__buttons a{
+        width: 50%;
     }
 
     .contact {
